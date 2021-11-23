@@ -18,7 +18,7 @@
     display: flex;
 }
 .page_ span{
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(247, 247, 247);
     padding:0px 5px;
     line-height: 1;
     display: flex;
@@ -61,20 +61,21 @@
 }
 .info_user{
     padding: 5px;
-    background-color: gray;
+    background-color: #E5E3E3;
 }
 .info_user .header_{
     text-align: center;
 }
-.username h3{
+.username h3,.nick_name{
+    text-align: center;
     color: red;
     font-weight: 700;
 }
-.username {
-    background: linear-gradient(to top , gray,white ,gray);
+.username ,.nick_name ,.body_inner,.content_post .header_ {
+    background: linear-gradient(to top , #E5E3E3,white ,#E5E3E3);
 }
 .info_user .header_ .ava_{
-    background-color: gray;
+    background-color: #E5E3E3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +83,34 @@
 .info_user .header_ .ava_ div{
     padding: 5px;
     background-color: white;
+}
+.body_inner{
+    border-radius: 15px;
+    padding: 5px;
+}
+.form_group{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;    
+    border-bottom: 1px dotted gray;
+}
+
+
+.main_post .info_user{
+    border-radius: 15px;
+}
+
+.content_post .header_{
+    padding: 5px 10px;
+}
+.content_post .header_ span{
+    vertical-align: middle;
+}
+.content_post .header_ .title_{
+    font-weight: 600;
+}
+.content_post .body_{
+    padding: 15px 5px;
 }
 </style>
 <script>
@@ -144,7 +173,7 @@
                         <span>Sát thủ vô tình</span>
                     </div>
                     <div class="body_inner">
-                        <div class="">
+                        <div class="form_group">
                             <div class="left_body">
                                 <span>Họ Tên</span>
                             </div>
@@ -152,7 +181,32 @@
                                 <span>Mai Thanh Bình</span>
                             </div>
                         </div>
-                        <div class="">
+                      
+                        <div class="form_group">
+                            <div class="left_body">
+                                <span>Tham gia ngày</span>
+                            </div>
+                            <div class="right_body">
+                                <span>Sep 2009</span>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="left_body">
+                                <span>Tuổi</span>
+                            </div>
+                            <div class="right_body">
+                                <span>99</span>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="left_body">
+                                <span>giới tính </span>
+                            </div>
+                            <div class="right_body">
+                                <span>A</span>
+                            </div>
+                        </div>
+                        <div class="form_group">
                             <div class="left_body">
                                 <span>Họ Tên</span>
                             </div>
@@ -160,7 +214,7 @@
                                 <span>Mai Thanh Bình</span>
                             </div>
                         </div>
-                        <div class="">
+                        <div class="form_group">
                             <div class="left_body">
                                 <span>Họ Tên</span>
                             </div>
@@ -168,23 +222,7 @@
                                 <span>Mai Thanh Bình</span>
                             </div>
                         </div>
-                        <div class="">
-                            <div class="left_body">
-                                <span>Họ Tên</span>
-                            </div>
-                            <div class="right_body">
-                                <span>Mai Thanh Bình</span>
-                            </div>
-                        </div>
-                        <div class="">
-                            <div class="left_body">
-                                <span>Họ Tên</span>
-                            </div>
-                            <div class="right_body">
-                                <span>Mai Thanh Bình</span>
-                            </div>
-                        </div>
-                        <div class="">
+                        <div class="form_group">
                             <div class="left_body">
                                 <span>Họ Tên</span>
                             </div>
@@ -196,21 +234,21 @@
                 </div>
             </div>
             <div class="content_post">
-                <div class="">
+                <div class="header_">
                     <span class="material-icons-outlined">
                     description
                     </span>
-                    <span>Ra mắt chức năng Phạt thẻ đối với thành viên vi phạm</span>
-                    <span>
+                    <span class="title_">Ra mắt chức năng Phạt thẻ đối với thành viên vi phạm</span>
+                    <!-- <span>
                         <a href="">
                             <span class="material-icons-outlined">
                             thumb_up
                             </span>Thích
                         </a>
                         <a href="">Chia sẻ</a>
-                    </span>
+                    </span> -->
                 </div>
-                <div class="">
+                <div class="body_">
                     <p>Để đảm bảo tính công bằng, cũng như xử phạt vi phạm diễn đàn được dễ dàng. Nay diễn đàn ra mắt chức phạt thẻ đối với những lỗi vi phạm.
 Khi phạt thẻ diễn đàn sẽ tự PM cho thành viên lý do và link bài viết vi phạm, khi đủ Points sẽ tự động Ban nick như sau:
 P/s: Các điều khoản trên có thể còn thiếu, các bạn nào thấy thiếu thì cho ý kiến.</p>
