@@ -1,30 +1,6 @@
 
 <style>
-body{
-    scroll-behavior: smooth;
-}
-footer .container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background: linear-gradient(to top,#043f71,rgb(15, 124, 197));
-}
-.footer_content{
-    padding: 15px;
-}
-.footer_content a,.footer_content span{
-    color: white;
-}
-.footer_content a{
-    font-weight: 600;
-    font-size: 20px;
-    margin-right: 10px;
-}
-.footer_content .header_{
-    margin-bottom: 20px;
-}
+
 </style>
 <script>
    function scrollTopFunction() {

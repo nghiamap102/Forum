@@ -11,112 +11,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script src="https://localhost/forum/ckeditor/ckeditor.js"></script>
 </head>
 <style>
-body{
-    scroll-behavior: smooth;
-}
-
-
-.header-top{
-    background-color: black;
-    color: white;
-}
-.header-wrapper{
-    display: flex;
-    justify-content: space-between;
-}
-.form-login {
-    margin: 0;
-}
-.form-login,.logo-wrapper{    
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
-.form-login input{
-    padding: 0px 7px;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-}
-label{
-    margin: 0;
-}
-.form-login label{
-    padding-right: 5px;
-}
-
-.save-password{
-    padding: 0px 10px;
-}
-
-.btn-login{
-    outline: none;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.banner{
-    background: linear-gradient(to top,#043f71,rgb(15, 124, 197));
-}
-.banner .navbar{
-    background: linear-gradient(to top,#043f71,rgb(60, 124, 197));     
-    border-radius: 25px;
-}
-.banner .navbar-brand,.nav-link{
-    color: white;
-}
-.nav-link {
-    font-weight: 600;
-    border-right: 1px ;
-}
-.nav-item{
-    padding: 0px 10px;
-}
-
-/*-------------------welcome_banner----------------------------------*/
-.welcome_banner{
-    background-color: white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom: 1px solid gray;
-}
-.welcome_banner .header_{
-    display: flex;
-}
-.welcome_banner .header_ span:first-child{
-    padding-right: 10px;
-}
-.welcome_banner .body_{
-    background-color: lightyellow;
-}
-.welcome_banner .body_inner{
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: 1px solid greenyellow;
-}
-.form_search .header_ span{
-    padding-right: 10px;
-}
-.search_field{
-    display: grid;
-    grid-template-columns: 75% 20%;
-    grid-gap: 10px;
-}
-.search_field input{
-    padding: 5px 10px;
-    border: 1px solid gray;
-    outline: none;
-}
-.search_field button{
-    border: none;
-    outline: none;
-    background-color: gray;
-}
-.search_field button span{
-    vertical-align: bottom;
-    color: white;
-}
 
 </style>
 
@@ -174,7 +71,7 @@ label{
                                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#">Contact</a>
+                                        <a class="nav-link" href="/forum/post.php">Post</a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="/forum/register.php">Register</a>
