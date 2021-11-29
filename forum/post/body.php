@@ -1,17 +1,5 @@
 <style>
-.post_body .container,.form-post{
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
-    border-bottom: 1px solid gray;
-}
-.post_body h2{
-    padding: 5px 10px;
-    background-color: black;
-    color: white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin: 0;
-}
+
 .form-post{
     padding: 5px 10px;
 }

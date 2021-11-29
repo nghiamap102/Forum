@@ -20,7 +20,7 @@
 }
 .title_{
     font-weight: 600;
-    background-color: rgb(223, 219, 219);       
+    background-color: rgb(223, 219, 219);           
     padding: 2px 10px;
 }
 .form-register .body_{

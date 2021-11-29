@@ -14,7 +14,26 @@
     <script src="https://localhost/forum/ckeditor/ckeditor.js"></script>
 </head>
 <style>
+    .dropdown-inner{
+        padding:  15px;
+    } 
+    .dropdown-menu{
+        left: -300px;
+        width: 800px;
+        max-height: 300px;
+        overflow: auto;
+    }
+    .dropdown-menu ul{
+        list-style: none;
+    }
+    .dropdown-content{
+        width: 100%;
+        margin: 0;
+    }
+    .dropdown-content a{
+        color: black;
 
+    }
 </style>
 
 <body class="grey lighten-4">       
@@ -60,21 +79,92 @@
                         </div>
                         <div class="col-md-7">
                             <nav class="navbar navbar-expand-lg">
-                                <a class="navbar-brand" href="#">Navbar</a>
+                                <a class="navbar-brand" href="#">Trang chủ</a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
 
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item active">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="/forum/post.php">Post</a>
                                     </li>
-                                    <li class="nav-item active">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/forum/post.php">Post</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Tiêu đề
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <div class="dropdown-inner">
+                                                <div class="dropdown-content row">
+                                                    <div class="col-md-3">
+                                                        <ul>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <ul>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <ul>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <ul>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                            <li><a href="">abc</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="nav-link" href="/forum/register.php">Register</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/forum/register.php">Contact</a>
                                     </li>
                                 </ul>
                                 </div>
