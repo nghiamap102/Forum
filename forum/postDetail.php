@@ -3,3 +3,4 @@
  include './postDetail/body.php';
  include './index/footer.php'
  ?>
+

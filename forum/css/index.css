@@ -154,6 +154,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.header_inner{
+    cursor: pointer;
+}
 /* ---------------------------footer------------------------- */
 
 footer .container{
@@ -240,13 +243,36 @@ label{
 .nav-item{
     padding: 0px 10px;
 }
+.dropdown-inner{
+    padding:  15px;
+} 
+.dropdown-menu{
+    left: -300px;
+    width: 800px;
+    max-height: 300px;
+    overflow: auto;
+}
+.dropdown-menu ul{
+    list-style: none;
+}
+.dropdown-menu ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+.dropdown-content{
+    width: 100%;
+    margin: 0;
+}
+.dropdown-content a{
+    color: black;
+}
 
 /*-------------------welcome_banner----------------------------------*/
 .welcome_banner{
     background-color: white;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(214, 214, 214);
 }
 .welcome_banner .header_{
     display: flex;
@@ -284,7 +310,124 @@ label{
     vertical-align: bottom;
     color: white;
 }
-/* ----------------------post---------------- */
+
+/* ----------------------------------postDetail-------------------------- */
+.post_detail .container{
+    border-left: 1px solid rgb(201, 200, 200);
+    border-right: 1px solid rgb(201, 200, 200);
+    border-bottom: 1px solid rgb(201, 200, 200);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.page_number{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.page_number div{
+    margin-right: 10px;
+}
+.page_ {
+    display: flex;
+}
+.page_ span{
+    background-color: rgb(247, 247, 247);
+    padding:0px 5px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+.number_ {
+    border: 1px solid gray;
+}
+.symbol_ span{
+    font-size: 20px;
+    padding: 0;
+}
+.title_post{
+    background: linear-gradient(351deg,black,rgb(70, 70, 70));
+    padding: 5px 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+}
+.title_post a{
+    color: white;
+    padding-left: 10px;
+    font-weight: 600;
+}
+.created_post{
+    background: linear-gradient(to top,#043f71,rgb(15, 124, 197));
+    color: white;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+.created_post span{
+    font-size: 13px;
+    vertical-align: middle;
+}
+.main_post{
+    display: grid;
+    grid-template-columns: 25% 74%;
+    grid-gap: 12px;
+    padding: 5px;
+}
+.info_user{
+    padding: 5px;
+    background-color: #E5E3E3;
+}
+.info_user .header_{
+    text-align: center;
+}
+.username h3,.nick_name{
+    text-align: center;
+    color: red;
+    font-weight: 700;
+}
+.username ,.nick_name ,.info_user .body_inner,.content_post .header_ {
+    background: linear-gradient(to top , #E5E3E3,white ,#E5E3E3);
+}
+.info_user .header_ .ava_{
+    background-color: #E5E3E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info_user .header_ .ava_ div{
+    padding: 5px;
+    background-color: white;
+}
+.body_inner{
+    border-radius: 15px;
+    padding: 5px;
+}
+.form_group{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;    
+    border-bottom: 1px dotted gray;
+}
+
+
+.main_post .info_user{
+    border-radius: 15px;
+}
+
+.content_post .header_{
+    padding: 5px 10px;
+}
+.content_post .header_ span{
+    vertical-align: middle;
+}
+.content_post .header_ .title_{
+    font-weight: 600;
+}
+.content_post .body_{
+    padding: 15px 5px;
+}
+
 .acb{
     background-color: rgb(55, 68, 255);
 }

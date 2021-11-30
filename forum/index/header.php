@@ -1,7 +1,5 @@
 <head>
-	<title>
-		Forum
-	</title>
+	<title>Forum</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
@@ -12,28 +10,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <script src="https://localhost/forum/ckeditor/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <style>
-    .dropdown-inner{
-        padding:  15px;
-    } 
-    .dropdown-menu{
-        left: -300px;
-        width: 800px;
-        max-height: 300px;
-        overflow: auto;
-    }
-    .dropdown-menu ul{
-        list-style: none;
-    }
-    .dropdown-content{
-        width: 100%;
-        margin: 0;
-    }
-    .dropdown-content a{
-        color: black;
-
-    }
+ 
 </style>
 
 <body class="grey lighten-4">       
@@ -79,7 +59,7 @@
                         </div>
                         <div class="col-md-7">
                             <nav class="navbar navbar-expand-lg">
-                                <a class="navbar-brand" href="#">Trang chủ</a>
+                                <a class="navbar-brand" href="/forum">Trang chủ</a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
@@ -99,61 +79,30 @@
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <div class="dropdown-inner">
                                                 <div class="dropdown-content row">
+                                                    <!-- for trong này -->
                                                     <div class="col-md-3">
-                                                        <ul>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                        </ul>
+                                                        <a href="">ABC</a>
                                                     </div>
+                                                    <!-- endfor -->
+
                                                     <div class="col-md-3">
-                                                        <ul>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <ul>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <ul>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                            <li><a href="">abc</a></li>
-                                                        </ul>
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div><div class="col-md-3">
+                                                        <a href="">ABC</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,7 +113,7 @@
                                         <a class="nav-link" href="/forum/register.php">Register</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/forum/register.php">Contact</a>
+                                        <a class="nav-link" href="/forum/contact.php">Contact</a>
                                     </li>
                                 </ul>
                                 </div>

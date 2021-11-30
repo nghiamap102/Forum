@@ -22,7 +22,7 @@ function topFunction() {
         <div class="footer_content">
             <div class="header_">
                 <a href="">Liên Lạc</a>
-                <a href="">Góp ý</a>
+                <a href="/forum/contact.php">Góp ý</a>
             </div>
             <div class="">
                 <span>Múi giờ GMT. Hiện tại là 01:04 PM. Powered by vBulletin® Version 4.2.5

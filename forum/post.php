@@ -50,7 +50,7 @@
 		display: flex;
 	}
 	.btn_submit{
-		background-color: rgb(55, 68, 255);
+		background-color:rgb(39, 112, 207); 
 		color: white;
 		cursor: pointer;
 	}

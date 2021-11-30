@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="static_field">
+        <div class="static_field tag_field">
             <div class="header_">
                 <div class="header_inner">
                     <span>Advanced Forum Statistics
@@ -377,7 +377,7 @@
                             <div class="infor_">
                                 <div class="info_inner">
                                     <div class="src_list_post">
-                                        <a href="/">Tintuc CNTT</a>
+                                        <a href="/forum/postDetail.php">Tintuc CNTT</a>
                                         <span class="viewing_">(6 viewing)</span>
                                     </div>
                                     <div class="description_">
@@ -757,3 +757,20 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    var a = document.querySelectorAll('.header_inner')
+    var b = document.querySelectorAll('.tag_field .body_')
+    console.log(b.length)
+    for( let i = 0 ; i < a.length ; i++){
+        $(a[i]).click(function(){
+            if ( $(b[i]).is( ":hidden" )) {
+                $(b[i]).slideDown('slow')
+            } else {
+                $(b[i]).slideUp('slow')
+            }
+            
+        });  
+    }
+</script>
