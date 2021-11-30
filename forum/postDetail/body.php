@@ -190,7 +190,7 @@
                         <textarea rows="5" name="cmt" class="form-control" placeholder="Viết câu trả lời của bạn..."  ></textarea>
                         <div class="form-group p-2">
                             <button type="submit" class="btn btn-primary" >Send</button>
-                            <button type="button" class="btn btn-primary" >Huy bỏ</button>
+                            <button type="button" class="btn_cancel btn btn-primary" >Huy bỏ</button>
                         </div>
                         
                     </form>
@@ -325,7 +325,7 @@
                             <textarea rows="5" name="cmt" class="form-control" placeholder="Viết câu trả lời của bạn..."  ></textarea>
                             <div class="form-group p-2">
                                 <button type="submit" class="btn btn-primary" >Send</button>
-                                <button type="button" class="btn btn-primary" >Huy bỏ</button>
+                                <button type="button" class="btn_cancel btn btn-primary" >Huy bỏ</button>
                             </div>
                            
                         </form>
@@ -453,7 +453,7 @@
                             <textarea rows="5" name="cmt" class="form-control" placeholder="Viết câu trả lời của bạn..."  ></textarea>
                             <div class="form-group p-2">
                                 <button type="submit" class="btn btn-primary" >Send</button>
-                                <button type="button" class="btn btn-primary" >Huy bỏ</button>
+                                <button type="button" class="btn_cancel btn btn-primary" >Huy bỏ</button>
                             </div>
                            
                         </form>
@@ -575,15 +575,14 @@
                         <span class="src_cmt">Phúc Đáp</span>
                     </div>
                 </div>
-                <div class="content_cmt" >
+                <div class="content_cmt">
                     <div class="">
                         <form method="post" action="">
                             <textarea rows="5" name="cmt" class="form-control" placeholder="Viết câu trả lời của bạn..."  ></textarea>
                             <div class="form-group p-2">
                                 <button type="submit" class="btn btn-primary" >Send</button>
-                                <button type="button" class="btn btn-primary" >Huy bỏ</button>
+                                <button type="button" class="btn_cancel btn btn-primary">Huy bỏ</button>
                             </div>
-                           
                         </form>
                     </div>
                 </div>
@@ -595,14 +594,27 @@
 <script>
     var a = document.querySelectorAll('.src_cmt')
     var b = document.querySelectorAll('.content_cmt')
+    var c = document.querySelectorAll('.btn_cancel')
+    console.log
     for( let i = 0 ; i < a.length ; i++){
         $(a[i]).click(function(){
             if ( $(b[i]).is( ":hidden" )) {
                 $(b[i]).slideDown('slow')
+                if(c.length > 0){
+                    for( let j = 0 ; j < c.length ; j++){
+                        $(c[i]).click(function(){
+                            $(c[i]).closest('.content_cmt').hide()
+                        })
+                    }
+                }
+              
             } else {
-                $(b[i]).hide()
+                $(b[i]).slideUp()
             }
-            
         });  
+        
     }
+    
+ 
+   
 </script>
