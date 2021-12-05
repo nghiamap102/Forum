@@ -311,26 +311,7 @@
                     </div>
                     
                 </div>
-                <div class="src_reply">
-                    <div class="src_reply_wrapper">
-                        <span class="material-icons-outlined mr-2">
-                        textsms
-                        </span>
-                        <span class="src_cmt">Phúc Đáp</span>
-                    </div>
-                </div>
-                <div class="content_cmt">
-                    <div class="">
-                        <form method="post" action="">
-                            <textarea rows="5" name="cmt" class="form-control" placeholder="Viết câu trả lời của bạn..."  ></textarea>
-                            <div class="form-group p-2">
-                                <button type="submit" class="btn btn-primary" >Send</button>
-                                <button type="button" class="btn_cancel btn btn-primary" >Huy bỏ</button>
-                            </div>
-                           
-                        </form>
-                    </div>
-                </div>
+              
             </div>
             <div class="ele_cmt">
                 <div class="created_post">
@@ -439,26 +420,7 @@
                     </div>
                     
                 </div>
-                <div class="src_reply">
-                    <div class="src_reply_wrapper">
-                        <span class="material-icons-outlined mr-2">
-                        textsms
-                        </span>
-                        <span class="src_cmt">Phúc Đáp</span>
-                    </div>
-                </div>
-                <div class="content_cmt">
-                    <div class="">
-                        <form method="post" action="">
-                            <textarea rows="5" name="cmt" class="form-control" placeholder="Viết câu trả lời của bạn..."  ></textarea>
-                            <div class="form-group p-2">
-                                <button type="submit" class="btn btn-primary" >Send</button>
-                                <button type="button" class="btn_cancel btn btn-primary" >Huy bỏ</button>
-                            </div>
-                           
-                        </form>
-                    </div>
-                </div>
+                
             </div>
             <div class="ele_cmt">
                 <div class="created_post">
@@ -567,25 +529,7 @@
                     </div>
                     
                 </div>
-                <div class="src_reply">
-                    <div class="src_reply_wrapper">
-                        <span class="material-icons-outlined mr-2">
-                        textsms
-                        </span>
-                        <span class="src_cmt">Phúc Đáp</span>
-                    </div>
-                </div>
-                <div class="content_cmt">
-                    <div class="">
-                        <form method="post" action="">
-                            <textarea rows="5" name="cmt" class="form-control" placeholder="Viết câu trả lời của bạn..."  ></textarea>
-                            <div class="form-group p-2">
-                                <button type="submit" class="btn btn-primary" >Send</button>
-                                <button type="button" class="btn_cancel btn btn-primary">Huy bỏ</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
