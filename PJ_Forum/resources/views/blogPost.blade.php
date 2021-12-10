@@ -42,7 +42,6 @@
             </div>
         </div>
         <div class="form-group">
-            <div></div>
             <div class="btn_wrapper">
                 <div class="">
                     <input type="submit" name="btn_submit" value="Thêm bài viết" class="form-control btn_submit">

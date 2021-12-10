@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tag;
 use App\Models\Blog;
@@ -15,18 +14,28 @@ class AdminController extends Controller
         $blog = Blog::all();
         return view('admin_blog', compact('blog'));
     }
+    public function add_blog()
+    {
+        $blog = Blog::all();
+        return view('admin_add_blog', compact('blog'));
+    }
     
     public function list_tag()
     {
         $tag = Tag::all();
         return view('admin_tag', compact('tag'));
-    }   
+    } 
     
     public function list_user()
     {
         $user = User::all();
         return view('admin_user', compact('user'));
     }   
+    public function add_user()
+    {
+        $blog = Blog::all();
+        return view('admin_add_user', compact('blog'));
+    }
     public function static()
     {
         $blog = Blog::all();

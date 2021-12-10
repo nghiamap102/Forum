@@ -41,4 +41,10 @@ class BlogController extends Controller
         return redirect(route('blogPost')) -> with('status', 'Success');
 
     }
+
+    public function search()
+    {
+        $blog = Blog::all();
+        return view('search', compact('blog'));
+    }
 }

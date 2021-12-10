@@ -22,6 +22,9 @@
 
     <script src="/assert/js/function.js"></script>
 </head>
+<style>
+
+</style>
 <body class="grey lighten-4">
 
     <header class="header-top" id="header-top">
@@ -48,6 +51,19 @@
                         </div>
 
                     </form>
+                    <div class="d-flex align-items-center " style="display: none!important;">
+                        <div class="avatar_">
+                            <img src="/vendors/images/img2.jpg" alt="">
+                        </div>
+                        <div class="dropdown">
+                            <span class="dropbtn">Admin</span>
+                            <div class="dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
