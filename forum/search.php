@@ -1,6 +1,5 @@
-<?php
- include './index/header.php';
-?>
+@extends('layout')
+@section('content')
 
 <div class="search">
     <div class="container py-3 mb-3">
@@ -109,7 +108,4 @@
     </div>
 </div>
 
-
-<?php
- include './index/footer.php'
-?>
+@endsection

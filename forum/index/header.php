@@ -41,6 +41,19 @@
                             </button>
                         </div>
                        
+                    <div class="d-flex align-items-center " >
+                        <div class="avatar_">
+                            <img src="/vendors/images/img2.jpg" alt="">
+                        </div>
+                        <div class="dropdown">
+                            <span class="dropbtn">Admin</span>
+                            <div class="dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
                     </form>
                 </div>
             </div>

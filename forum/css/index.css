@@ -199,7 +199,7 @@ body{
 .form-login {
     margin: 0;
 }
-.form-login,.logo-wrapper{    
+.form-login,.logo-wrapper{
     padding: 10px;
     display: flex;
     align-items: center;
@@ -230,7 +230,7 @@ label{
     background: linear-gradient(to top,#043f71,rgb(15, 124, 197));
 }
 .banner .navbar{
-    background: linear-gradient(to top,#043f71,rgb(60, 124, 197));     
+    background: linear-gradient(to top,#043f71,rgb(60, 124, 197));
     border-radius: 25px;
 }
 .banner .navbar-brand,.nav-link{
@@ -245,7 +245,7 @@ label{
 }
 .dropdown-inner{
     padding:  15px;
-} 
+}
 .dropdown-menu{
     left: -300px;
     width: 800px;
@@ -266,7 +266,70 @@ label{
 .dropdown-content a{
     color: black;
 }
+.loginarea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+  
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropbtn {
+    font-weight: 600;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropbtn::after{
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    bottom: -140px;
+    visibility: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;visibility: inherit;}
+
+.loginarea .avatar_{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+}
 /*-------------------welcome_banner----------------------------------*/
 .welcome_banner{
     background-color: white;
@@ -311,7 +374,7 @@ label{
     color: white;
 }
 
-/* ----------------------------------postDetail-------------------------- */
+/* ----------------------------------Blog Detail-------------------------- */
 .post_detail .container{
     border-left: 1px solid rgb(201, 200, 200);
     border-right: 1px solid rgb(201, 200, 200);
@@ -406,11 +469,9 @@ label{
 .form_group{
     display: flex;
     justify-content: space-between;
-    font-size: 13px;    
+    font-size: 13px;
     border-bottom: 1px dotted gray;
 }
-
-
 .main_post .info_user{
     border-radius: 15px;
 }
@@ -427,29 +488,44 @@ label{
 .content_post .body_{
     padding: 15px 5px;
 }
-
-
-/* -----------------------search.php----------------- */
-.search .item_{
-    border-top: 1px solid rgb(190, 190, 190);
-    padding: 10px 0px;
-
-}
-.search ul{
-    margin: 0;
-}
-.search .container,.profile .container{
-    border-bottom: 1px solid rgb(190, 190, 190);
-    border-left: 1px solid rgb(190, 190, 190);
-    border-right: 1px solid rgb(190, 190, 190);
-}
-
 .acb{
-    background-color: rgb(101, 162, 253);
+    background-color: rgb(55, 68, 255);
+}
+.src_reply{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    padding: 5px 10px;
+}
+.src_reply_wrapper{
+    display: flex;
+    align-items: center;
+}
+.src_reply_wrapper span{
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.list_cmt .heading_{
+    padding-left: 10px;
+    margin: 5px 0px;
+
+}
+.list_cmt .heading_wrapper{
+    background-color: rgb(230, 230, 230);
+    padding: 0px 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-weight: 600;
+}
+.content_cmt{
+    padding: 5px;
+    display: none;
+    transition: transform .5s ease;
 }
 
-
-/* ---------------------------register----------------- */
+/* ----------------------------------Register-------------------------- */
 .register_{
     margin-bottom: 20px;
 }
@@ -471,7 +547,7 @@ label{
 }
 .title_{
     font-weight: 600;
-    background-color: rgb(223, 219, 219);           
+    background-color: rgb(223, 219, 219);
     padding: 2px 10px;
 }
 .form-register .body_{
@@ -492,9 +568,10 @@ label{
 }
 .btn_{
     margin: 0 auto;
-    
+
 }
 .btn_ button{
+    /* border: 1px solid rgb(53, 198, 255); */
     border: none;
     outline: none;
     padding: 5px 10px;
@@ -503,7 +580,97 @@ label{
     color:  white;
 }
 
+/* ----------------------------------Blog Post----------------------------- */
+.body_post .container{
+    border-left: 1px solid rgb(214, 214, 214);
+    border-right: 1px solid rgb(214, 214, 214);
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+.body_post select{
+    outline: none;
+    border: 1px solid  rgb(214, 214, 214);
+    width: 50%;
+}
+.body_post .form-group{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
 
-/* ---------------------------contact----------------------- */
+.btn_check{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.btn_check input{
+    width: 20px;
+}
 
-/* -----------------------profile---------------------- */
+.btn_wrapper{
+    display: flex;
+}
+.btn_submit{
+    background-color:rgb(39, 112, 207);
+    color: white;
+    cursor: pointer;
+}
+
+/* ----------------------------------CKEditor----------------------------- */
+.ck-editor__editable {
+    min-height: 300px;
+    max-height: 300px;
+}
+
+/* ----------------------------------Contact----------------------------- */
+.section_info{
+    display: grid;
+    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+    grid-gap: 20px;
+}
+.ele_{
+    padding: 30px;
+    background-color:  rgb(39, 112, 207);
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+}
+.ele_  span{
+    font-size: 50px;
+}
+.list_icon {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.list_icon li{
+    display: inline;
+    font-size: 30px;
+}
+.section_email h3{
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+.section_email p {
+    margin: 30px 0px;
+}
+.list_icon a{
+    color:  rgb(39, 112, 207);;
+    margin: 0px 15px;
+}
+.btn_submit{
+    background-color:  rgb(39, 112, 207);
+    color: white;
+}
+
+/* ---------------------------------search--------------------- */
+.search .item_{
+    border-top: 1px solid rgb(190, 190, 190);
+    padding: 10px 0px;
+}
+.search ul{
+    margin: 0;
+}
+.search .container,.profile .container{
+    border-bottom: 1px solid rgb(190, 190, 190);
+    border-left: 1px solid rgb(190, 190, 190);
+    border-right: 1px solid rgb(190, 190, 190);
+}
