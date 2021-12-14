@@ -342,7 +342,6 @@
 						<div class="pull-right">
 							<form action="" class="d-flex">
 								<input type="text" placeholder="Nhập từ khóa" class="form-control">
-								<button class="btn btn-primary">Search</button>
 							</form>
 						</div>
 					</div>

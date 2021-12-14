@@ -351,6 +351,16 @@
 							</div>
 						</div>
 						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Tag</label>
+							<div class="col-sm-12 col-md-10">
+								<select name="tag" style="width: 100%;" class="form-control">
+									<option value="acb">ABC</option>
+									<option value="acb">ABC</option>
+									<option value="acb">ABC</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Search</label>
 							<div class="col-sm-12 col-md-10">
 								<textarea name="post_content" id="post_content" class="form-control"></textarea>
@@ -369,10 +379,6 @@
 					</form>
 				</div>
 				<!-- Default Basic Forms End -->
-
-				<!-- horizontal Basic Forms Start -->
-				
-
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
 				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
