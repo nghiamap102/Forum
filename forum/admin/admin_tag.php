@@ -27,7 +27,13 @@
 	<!-- bootstrap-touchspin css -->
 	<link rel="stylesheet" type="text/css" href="../src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
@@ -37,6 +43,41 @@
 
 		gtag('config', 'UA-119386393-1');
 	</script>
+	<style>
+	
+.modal-confirm{
+    z-index: 100;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 150px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.model-box{
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 15px;
+    outline: 0;
+    width: 600px;
+    border-radius: 20px;
+}
+.box-footer{
+    text-align: right;
+}
+.btn-wrapper{
+    display: inline-block;
+}
+.btn-wrapper button{
+    width: auto;
+    display: inline;
+}
+	</style>
 </head>
 <body>
 	<div class="pre-loader">
@@ -367,12 +408,32 @@
 										build
 										</span>
 									</a>
-									<a href="delete">
+									<a href="javascript:;" class="garbage">
 										<span class="material-icons-outlined">
 										delete
 										</span>
 									</a>
-								</td>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+													header	
+												</h3>
+												<div class="box-body">	
+													<p>Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>				
 							</tr>
 							<tr>
 								<th scope="row">2</th>
@@ -385,12 +446,32 @@
 										build
 										</span>
 									</a>
-									<a href="delete">
+									<a href="javascript:;" class="garbage">
 										<span class="material-icons-outlined">
 										delete
 										</span>
 									</a>
-								</td>							
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+													header	
+												</h3>
+												<div class="box-body">	
+													<p>Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>								
 							</tr>
 							<tr>
 								<th scope="row">3</th>
@@ -441,7 +522,25 @@
 	<script src="../vendors/scripts/advanced-components.js"></script>
 	<script src="../vendors/scripts/apexcharts-setting.js"></script>
 	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
-
+	<script>
+		var a = document.querySelectorAll('.garbage')
+		var b = document.querySelectorAll('.modal-confirm')
+		var c = document.querySelectorAll('.close')
+		var d = document.querySelectorAll('.close-btn')
+	
+		for(let i = 0 ; i <a.length ; i++){
+			
+			$(a[i]).on('click' , function(){
+				$(b[i]).fadeIn()
+			})
+			$(c[i]).on('click' , function(){
+				$(b[i]).fadeOut()
+			})
+			$(d[i]).on('click' , function(){
+				$(b[i]).fadeOut()
+			})
+		}
+	</script>
 </body>
 </html>
 
