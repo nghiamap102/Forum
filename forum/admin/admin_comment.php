@@ -37,6 +37,42 @@
 
 		gtag('config', 'UA-119386393-1');
 	</script>
+	<style>
+	
+.modal-confirm{
+    z-index: 100;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 150px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.model-box{
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 15px;
+    outline: 0;
+    width: 600px;
+    border-radius: 20px;
+}
+.box-footer{
+    text-align: right;
+}
+.btn-wrapper{
+    display: inline-block;
+}
+.btn-wrapper button{
+    width: auto;
+    display: inline;
+}
+
+	</style>
 </head>
 <body>
 	<div class="pre-loader">
@@ -353,11 +389,11 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th scope="col">#</th>
-								<th scope="col">First</th>
-								<th scope="col">Last</th>
-								<th scope="col">Handle</th>
-								<th scope="col">Tag</th>
+								<th scope="col">ID</th>
+								<th scope="col">Comment</th>
+								<th scope="col">Created Date</th>
+								<th scope="col">User</th>
+								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -372,12 +408,32 @@
 										build
 										</span>
 									</a>
-									<a href="delete">
+									<a href="javascript:;" class="garbage">
 										<span class="material-icons-outlined">
 										delete
 										</span>
 									</a>
-								</td>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+													header	
+												</h3>
+												<div class="box-body">	
+													<p>Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<!-- truyền id của mỗi blog dô đây -->
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>			
 							</tr>
 							<tr>
 								<th scope="row">2</th>
@@ -390,12 +446,32 @@
 										build
 										</span>
 									</a>
-									<a href="delete">
+									<a href="javascript:;" class="garbage">
 										<span class="material-icons-outlined">
 										delete
 										</span>
 									</a>
-								</td>							
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+													header	
+												</h3>
+												<div class="box-body">	
+													<p>Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<!-- truyền id của mỗi blog dô đây -->
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>									
 							</tr>
 							<tr>
 								<th scope="row">3</th>
@@ -408,17 +484,36 @@
 										build
 										</span>
 									</a>
-									<a href="delete" type="">
+									<a href="javascript:;" class="garbage">
 										<span class="material-icons-outlined">
 										delete
 										</span>
 									</a>
-									
-								</td>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+													header	
+												</h3>
+												<div class="box-body">	
+													<p>Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<!-- truyền id của mỗi blog dô đây -->
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>			
 							</tr>
 						</tbody>
 					</table>
-					<a href="add-blog" class="btn btn-primary">ADD BLOG</a>
+					<a href="add-comment" class="btn btn-primary">ADD COMMENT</a>
 				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
@@ -441,5 +536,24 @@
 	<script src="../vendors/scripts/apexcharts-setting.js"></script>
 	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
 
+	<script>
+		var a = document.querySelectorAll('.garbage')
+		var b = document.querySelectorAll('.modal-confirm')
+		var c = document.querySelectorAll('.close')
+		var d = document.querySelectorAll('.close-btn')
+	
+		for(let i = 0 ; i <a.length ; i++){
+			
+			$(a[i]).on('click' , function(){
+				$(b[i]).fadeIn()
+			})
+			$(c[i]).on('click' , function(){
+				$(b[i]).fadeOut()
+			})
+			$(d[i]).on('click' , function(){
+				$(b[i]).fadeOut()
+			})
+		}
+	</script>
 </body>
 </html>

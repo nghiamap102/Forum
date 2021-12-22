@@ -48,6 +48,38 @@
 	<style>
 	
 
+	.modal-confirm{
+    z-index: 100;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 150px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.model-box{
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 15px;
+    outline: 0;
+    width: 600px;
+    border-radius: 20px;
+}
+.box-footer{
+    text-align: right;
+}
+.btn-wrapper{
+    display: inline-block;
+}
+.btn-wrapper button{
+    width: auto;
+    display: inline;
+}
 	</style>
 </head>
 <body>
@@ -366,10 +398,10 @@
 						<thead>
 							<tr>
 								<th scope="col">#</th>
-								<th scope="col">First</th>
-								<th scope="col">Last</th>
-								<th scope="col">Handle</th>
-								<th scope="col">Tag</th>
+								<th scope="col">Title</th>
+								<th scope="col">Created Date</th>
+								<th scope="col">User</th>
+								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody>
