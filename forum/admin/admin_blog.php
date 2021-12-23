@@ -426,10 +426,9 @@
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close1"  class="close"><i class="fas fa-times"></i></span>
-													header	
 												</h3>
-												<div class="box-body">	
-													<p>Bạn có đồng ý xóa hay không?</p>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -464,10 +463,9 @@
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
-													header	
 												</h3>
-												<div class="box-body">	
-													<p>Bạn có đồng ý xóa hay không?</p>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">

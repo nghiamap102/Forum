@@ -707,3 +707,8 @@ display: inline-block;
     width: auto;
     display: inline;
 }
+
+.acept-btn{
+	background-color: #4972dc;
+	color: white;
+}

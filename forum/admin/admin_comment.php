@@ -28,6 +28,14 @@
 	<link rel="stylesheet" type="text/css" href="../src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
@@ -70,6 +78,10 @@
 .btn-wrapper button{
     width: auto;
     display: inline;
+}
+.acept-btn{
+	background-color: #4972dc;
+	color: white;
 }
 
 	</style>
@@ -418,10 +430,9 @@
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
-													header	
 												</h3>
-												<div class="box-body">	
-													<p>Bạn có đồng ý xóa hay không?</p>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -456,10 +467,9 @@
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
-													header	
 												</h3>
-												<div class="box-body">	
-													<p>Bạn có đồng ý xóa hay không?</p>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -494,10 +504,9 @@
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
-													header	
 												</h3>
-												<div class="box-body">	
-													<p>Bạn có đồng ý xóa hay không?</p>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -513,8 +522,33 @@
 							</tr>
 						</tbody>
 					</table>
-					<a href="add-comment" class="btn btn-primary">ADD COMMENT</a>
-				</div>
+					<input type="button" class="btn btn-primary mt-2 garbage" value="ADD COMMENT" />
+					<div class="modal-confirm">
+						<div class="model-box">
+							<div class="box-wrapper">
+								<h3 class="box-header">
+									<!-- truyền id của mỗi blog dô đây -->
+									<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+								</h3>
+								<div class="box-body mb-2">
+									<label for="tag-select" class="font-20" style="font-weight: 600;">Chủ đề</label>	
+										<select name="" id="tag-select" class="form-control">
+										<option value="">ABC</option>
+										<option value="">ABC</option>
+										<option value="">ABC</option>
+									</select>
+									<label for="content-input" class="font-20" style="font-weight: 600;">Nội dung</label>	
+									<input type="text" class="form-control" id="content-input" name="content" value="" placeholder="Nhập Nội Dung">									
+								</div>
+								<div class="box-footer">
+									<div class="btn-wrapper">
+										<button type="submit" class="acept-btn form-control">Đồng ý</button>
+										<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
 				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>

@@ -77,6 +77,10 @@
     width: auto;
     display: inline;
 }
+.acept-btn{
+	background-color: #4972dc;
+	color: white;
+}
 	</style>
 </head>
 <body>
@@ -419,8 +423,8 @@
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
 													header	
 												</h3>
-												<div class="box-body">	
-													<p>Bạn có đồng ý xóa hay không?</p>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -454,10 +458,9 @@
 												<h3 class="box-header">
 													<!-- truyền id của mỗi blog dô đây -->
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
-													header	
 												</h3>
-												<div class="box-body">	
-													<p>Bạn có đồng ý xóa hay không?</p>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -490,12 +493,27 @@
 							</tr>
 						</tbody>
 					</table>
-					<form action="">
-						<div class="form-group">
-							<input type="text" name="" id="" placeholder="NHập Tag Mún Thêm" class="form-control">
-							<button type="submit" class="btn btn-primary mt-2" >ADD TAG</button>
+					<input type="button" class="btn btn-primary mt-2 garbage" value="ADD TAG" />
+					<div class="modal-confirm">
+						<div class="model-box">
+							<div class="box-wrapper">
+								<h3 class="box-header">
+									<!-- truyền id của mỗi blog dô đây -->
+									<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+								</h3>
+								<div class="box-body mb-2">
+									<label for="tag-input" class="font-20" style="font-weight: 600;">Tên Tag</label>	
+									<input type="text" class="form-control" id="tag-input" name="tag" value="" placeholder="Nhập Tag Muốn Thêm">									
+								</div>
+								<div class="box-footer">
+									<div class="btn-wrapper">
+										<button type="submit" class="acept-btn form-control">Đồng ý</button>
+										<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+									</div>
+								</div>
+							</div>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
@@ -520,6 +538,7 @@
 	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
 	<script>
 		var a = document.querySelectorAll('.garbage')
+		console.log(a)
 		var b = document.querySelectorAll('.modal-confirm')
 		var c = document.querySelectorAll('.close')
 		var d = document.querySelectorAll('.close-btn')
