@@ -31,7 +31,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	
-	
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -47,7 +46,7 @@
 	</script>
 	<style>
 	
-.modal-confirm{
+.modal-confirm,.modal-confirm-update{
     z-index: 100;
     display: none;
     position: fixed;
@@ -415,24 +414,38 @@
 								<td>Otto</td>
 								<td>@mdo</td>
 								<td>
-									<a href="add" type="button">
+									<a href="javascript:;" type="button" class="fix">
 										<span class="material-icons-outlined">
 										build
 										</span>
 									</a>
-									<a href="javascript:;" class="garbage">
-										<span class="material-icons-outlined">
-										delete
-										</span>
-									</a>
-									<div class="modal-confirm">
+									<div class="modal-confirm-update">
 										<div class="model-box">
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
 												</h3>
 												<div class="box-body mb-2">	
-													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+												<div class="form-group">
+										<label for="user-select" class="font-20" style="font-weight: 600;">Người Đăng</label>	
+											<select name="" id="user-select" class="form-control">
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+										</select>
+										</div>
+										<div class="form-group">
+										<label for="tag-select" class="font-20" style="font-weight: 600;">Chủ đề</label>	
+											<select name="" id="tag-select" class="form-control">
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+										</select>
+										</div>
+										<div class="form-group">
+										<label for="content-input" class="font-20" style="font-weight: 600;">Nội dung</label>	
+										<textarea class="form-control" id="content-input" name="content" value="" placeholder="Nhập Nội Dung"></textarea>									
+									</div>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -444,7 +457,31 @@
 											</div>
 										</div>
 									</div>
-								</td>			
+									<a href="javascript:;" class="garbage">
+										<span class="material-icons-outlined">
+										delete
+										</span>
+									</a>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>				
 							</tr>
 							<tr>
 								<th scope="row">2</th>
@@ -452,24 +489,38 @@
 								<td>Thornton</td>
 								<td>@fat</td>
 								<td>
-									<a href="add" type="button">
+									<a href="javascript:;" type="button" class="fix">
 										<span class="material-icons-outlined">
 										build
 										</span>
 									</a>
-									<a href="javascript:;" class="garbage">
-										<span class="material-icons-outlined">
-										delete
-										</span>
-									</a>
-									<div class="modal-confirm">
+									<div class="modal-confirm-update">
 										<div class="model-box">
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
 												</h3>
 												<div class="box-body mb-2">	
-													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+													<div class="form-group">
+														<label for="user-select2" class="font-20" style="font-weight: 600;">Người Đăng</label>	
+															<select name="" id="user-select2" class="form-control">
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+														</select>
+														</div>
+														<div class="form-group">
+														<label for="tag-select2" class="font-20" style="font-weight: 600;">Chủ đề</label>	
+															<select name="" id="tag-select2" class="form-control">
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+														</select>
+														</div>
+														<div class="form-group">
+														<label for="content-input2" class="font-20" style="font-weight: 600;">Nội dung</label>	
+														<textarea class="form-control" id="content-input2" name="content" value="" placeholder="Nhập Nội Dung"></textarea>									
+													</div>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -481,7 +532,31 @@
 											</div>
 										</div>
 									</div>
-								</td>									
+									<a href="javascript:;" class="garbage">
+										<span class="material-icons-outlined">
+										delete
+										</span>
+									</a>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>								
 							</tr>
 							<tr>
 								<th scope="row">3</th>
@@ -489,24 +564,38 @@
 								<td>the Bird</td>
 								<td>@twitter</td>
 								<td>
-									<a href="add" type="button">
+									<a href="javascript:;" type="button" class="fix">
 										<span class="material-icons-outlined">
 										build
 										</span>
 									</a>
-									<a href="javascript:;" class="garbage">
-										<span class="material-icons-outlined">
-										delete
-										</span>
-									</a>
-									<div class="modal-confirm">
+									<div class="modal-confirm-update">
 										<div class="model-box">
 											<div class="box-wrapper">
 												<h3 class="box-header">
 													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
 												</h3>
 												<div class="box-body mb-2">	
-													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+													<div class="form-group">
+														<label for="user-select3" class="font-20" style="font-weight: 600;">Người Đăng</label>	
+															<select name="" id="user-select3" class="form-control">
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+														</select>
+														</div>
+														<div class="form-group">
+														<label for="tag-select3" class="font-20" style="font-weight: 600;">Chủ đề</label>	
+															<select name="" id="tag-select3" class="form-control">
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+														</select>
+														</div>
+														<div class="form-group">
+														<label for="content-input3" class="font-20" style="font-weight: 600;">Nội dung</label>	
+														<textarea class="form-control" id="content-input3" name="content" value="" placeholder="Nhập Nội Dung"></textarea>									
+													</div>
 												</div>
 												<div class="box-footer">
 													<div class="btn-wrapper">
@@ -518,7 +607,31 @@
 											</div>
 										</div>
 									</div>
-								</td>			
+									<a href="javascript:;" class="garbage">
+										<span class="material-icons-outlined">
+										delete
+										</span>
+									</a>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>				
 							</tr>
 						</tbody>
 					</table>
@@ -531,14 +644,26 @@
 									<span id="close2"  class="close"><i class="fas fa-times"></i></span>
 								</h3>
 								<div class="box-body mb-2">
-									<label for="tag-select" class="font-20" style="font-weight: 600;">Chủ đề</label>	
-										<select name="" id="tag-select" class="form-control">
-										<option value="">ABC</option>
-										<option value="">ABC</option>
-										<option value="">ABC</option>
-									</select>
-									<label for="content-input" class="font-20" style="font-weight: 600;">Nội dung</label>	
-									<input type="text" class="form-control" id="content-input" name="content" value="" placeholder="Nhập Nội Dung">									
+									<div class="form-group">
+										<label for="user-select" class="font-20" style="font-weight: 600;">Người Đăng</label>	
+											<select name="" id="user-select" class="form-control">
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+										</select>
+										</div>
+										<div class="form-group">
+										<label for="tag-select" class="font-20" style="font-weight: 600;">Chủ đề</label>	
+											<select name="" id="tag-select" class="form-control">
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+											<option value="">ABC</option>
+										</select>
+										</div>
+										<div class="form-group">
+										<label for="content-input" class="font-20" style="font-weight: 600;">Nội dung</label>	
+										<textarea class="form-control" id="content-input" name="content" value="" placeholder="Nhập Nội Dung"></textarea>									
+									</div>
 								</div>
 								<div class="box-footer">
 									<div class="btn-wrapper">
@@ -569,13 +694,16 @@
 	<script src="../vendors/scripts/advanced-components.js"></script>
 	<script src="../vendors/scripts/apexcharts-setting.js"></script>
 	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
-
 	<script>
 		var a = document.querySelectorAll('.garbage')
 		var b = document.querySelectorAll('.modal-confirm')
-		var c = document.querySelectorAll('.close')
-		var d = document.querySelectorAll('.close-btn')
-	
+		var c = document.querySelectorAll('.modal-confirm .close')
+		var d = document.querySelectorAll('.modal-confirm .close-btn')
+		var e = document.querySelectorAll('.modal-confirm-update')
+		var f = document.querySelectorAll('.fix')
+		var g = document.querySelectorAll('.modal-confirm-update .close-btn')
+		var x = document.querySelectorAll('.modal-confirm-update .close')
+
 		for(let i = 0 ; i <a.length ; i++){
 			
 			$(a[i]).on('click' , function(){
@@ -586,6 +714,15 @@
 			})
 			$(d[i]).on('click' , function(){
 				$(b[i]).fadeOut()
+			})
+			$(f[i]).on('click' , function(){
+				$(e[i]).fadeIn()
+			})
+			$(g[i]).on('click' , function(){
+				$(e[i]).fadeOut()
+			})
+			$(x[i]).on('click' , function(){
+				$(e[i]).fadeOut()
 			})
 		}
 	</script>
