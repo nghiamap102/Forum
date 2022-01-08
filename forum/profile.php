@@ -14,72 +14,121 @@
 .table_ td,.table_ th{
     text-align: left;
 }
+.img-circle{
+    border-radius: 50%;
+}
+.pull-left{
+    float: left;
+}
+.panel-default{
+    border-color: #ddd!important;
+}
+.panel{
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+.panel-default .panel-heading{
+     color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.panel-heading{
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel-body{
+    padding: 15px;
+}
+.col-xs-6{
+    width: 50%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.col-xs-12{
+    width: 100%;
+    float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.f-16{
+    font-size: 16px;
+}
 </style>
 <div class="profile">
     <div class="container p-2 mb-3">
         <div class="wrapper" style="border: 1px solid  rgb(190, 190, 190) ; padding: 10px;">
-            <div class=" content-profile">
-                <div class="">
-                    <div class="header">
-                        <h5>My Account</h5>
+            <h3 style="letter-spacing: 3px;">Profile</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="text-center mb-3">
+                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                        <h6 style="color: gray; font-size: 13px; text-align: center;">Upload a different photo...</h6>
+                        <input type="file" name="" value="">
                     </div>
-                    <div class="form-detail-wrapper">
-                        <form class="row form-detail" onSubmit={update_info}>
-                            <div class="col-md-8">
-                                <div class="detail">
-                                <div class="form-group">
-                                        <div class="form-left">
-                                            <label>Username</label>
-                                        </div>
-                                        <div class="form-right">
-                                            <input type="text" name="" value="" disabled class="form-control change_">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-left">
-                                            <label>Password</label>
-                                        </div>
-                                        <div class="form-right">
-                                            <input type="password" name="" value="" disabled class="form-control change_">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-left">
-                                            <label>Sex</label>
-                                        </div>
-                                        <div class="form-right">
-                                            <select name="" disabled class="form-control change_">
-                                                <option value="">Male</option>
-                                                <option value="">Female</option>
-                                                <option value="">Other</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-left">
-                                            <label>Nickname</label>
-                                        </div>
-                                        <div class="form-right">
-                                            <input type="text" name="" value="" disabled class="form-control change_">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-left">
-                                            <label>Email</label>
-                                        </div>
-                                        <div class="form-right">
-                                            <input type="text" name="" value="" disabled class="form-control change_">
-                                        </div>
-                                    </div>
-                                    <div class="">
-                                        <span class="btn btn-primary btn_change">Change</span>
-                                        <button class="btn btn-primary btn_save">Save</button>
-                                    </div>
-                                    
-                                </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Website</div>
+                        <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+                    </div>
+                    <div class="">
+                        <ul class="list-group">
+                            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+                            <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
+                            <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
+                            <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+                            <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                <form class="form" action="##" method="post" id="registrationForm">
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="Username"><h4 class="f-16">Username</h4></label>
+                            <input type="text" class="form-control" name="Username" id="Username">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="Password"><h4 class="f-16">Password</h4></label>
+                            <input type="text" class="form-control" name="Password" id="Password">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="Email"><h4 class="f-16">Email</h4></label>
+                            <input type="text" class="form-control" name="Email" id="Email">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="Sex"><h4 class="f-16">Sex</h4></label>
+                            <input type="text" class="form-control" name="Sex" id="Sex">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="nick"><h4 class="f-16">Nick Name</h4></label>
+                            <input type="text" class="form-control" name="NickName" id="nick">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                                <br>
+                                <button class="btn btn-lg btn-success" type="submit">
+                                    <span class="material-icons-outlined" style="vertical-align: middle;">
+                                        check_circle
+                                        </span> 
+                                        Save</button>
+                                <button class="btn btn-lg" type="reset">
+                                    <span class="material-icons-outlined" style="vertical-align: middle;">
+                                    restart_alt
+                                    </span>
+                                    Reset</button>
                             </div>
-                        </form>
                     </div>
+              	</form>
                 </div>
             </div>
             <div class="table_user py-5">
@@ -95,6 +144,24 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <th>1</th>
+                            <th>abc</th>
+                            <th>abc</th>
+                            <th>abc</th>
+                            <th>
+                                <div>
+                                    <a href="" type="button" class="" style="color: grey;">
+										<span class="material-icons-outlined">
+										build
+										</span>
+									</a>
+                                    <a href="" type="button" class="" style="color: grey;">
+										<span class="material-icons-outlined">
+										delete
+										</span>
+									</a>
+                                </div>
+                            </th>
                         </tbody>
                     </table>
                 </div>
