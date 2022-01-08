@@ -27,8 +27,16 @@
 	<!-- bootstrap-touchspin css -->
 	<link rel="stylesheet" type="text/css" href="../src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -37,6 +45,46 @@
 
 		gtag('config', 'UA-119386393-1');
 	</script>
+	<style>
+	
+
+	.modal-confirm,.modal-confirm-update{
+    z-index: 100;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 120px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.model-box{
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 15px;
+    outline: 0;
+    width: 600px;
+    border-radius: 20px;
+}
+.box-footer{
+    text-align: right;
+}
+.btn-wrapper{
+    display: inline-block;
+}
+.btn-wrapper button{
+    width: auto;
+    display: inline;
+}
+.acept-btn{
+	background-color: #4972dc;
+	color: white;
+}
+	</style>
 </head>
 <body>
 	<div class="pre-loader">
@@ -249,7 +297,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>s
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
@@ -270,18 +318,23 @@
 						</a>
 					</li>
 					<li class="dropdown">
-						<a href="blog" class="dropdown-toggle no-arrow">
+						<a href="admin_blog.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-edit2"></span><span class="mtext">Blog</span>
 						</a>
 					</li>
 					<li>
-						<a href="user" class="dropdown-toggle no-arrow">
+						<a href="admin_user.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-calendar1"></span><span class="mtext">User</span>
 						</a>
 					</li>
 					<li>
-						<a href="tag"class="dropdown-toggle no-arrow">
+						<a href="admin_tag.php"class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-diagram"></span><span class="mtext">Tag</span>
+						</a>
+					</li>
+                    <li>
+						<a href="admin_comment.php"class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-diagram"></span><span class="mtext">Comment</span>
 						</a>
 					</li>
 					<li>
@@ -301,6 +354,7 @@
 	</div>
 	<div class="mobile-menu-overlay"></div>
 
+	
 	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
@@ -339,17 +393,19 @@
 							<p>Add class <code>.table</code></p>
 						</div>
 						<div class="pull-right">
-							<a href="#basic-table" class="btn btn-primary btn-sm scroll-click" rel="content-y"  data-toggle="collapse" role="button"><i class="fa fa-code"></i> Source Code</a>
+							<form action="" class="d-flex">
+								<input type="text" placeholder="Nhập từ khóa" class="form-control">
+							</form>
 						</div>
 					</div>
 					<table class="table">
 						<thead>
 							<tr>
 								<th scope="col">#</th>
-								<th scope="col">First</th>
-								<th scope="col">Last</th>
-								<th scope="col">Handle</th>
-								<th scope="col">Tag</th>
+								<th scope="col">Title</th>
+								<th scope="col">Created Date</th>
+								<th scope="col">User</th>
+								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -358,44 +414,298 @@
 								<td>Mark</td>
 								<td>Otto</td>
 								<td>@mdo</td>
-								<td><span class="badge badge-primary">Primary</span></td>
+								<td>
+									<a href="javascript:;" type="button" class="fix">
+										<span class="material-icons-outlined">
+										build
+										</span>
+									</a>
+									<div class="modal-confirm-update">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<div class="form-group">
+														<label for="username" class="font-20" style="font-weight: 600;">Username</label>	
+														<input type="text" name="" value="admin" id="username" class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="password" class="font-20" style="font-weight: 600;">Password</label>	
+														<input type="text" name="" value="password" id="password" class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="email" class="font-20" style="font-weight: 600;">Email</label>	
+														<input type="text" name="" value="email" id="email"  class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="nickname" class="font-20" style="font-weight: 600;">Nickname</label>	
+														<input type="text" name="" value="nickname" id="nickname"  class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="role" class="font-20" style="font-weight: 600;">Role</label>	
+														<select name="role" id="role" class="form-control">
+															<option value="">admin</option>
+															<option value="">staff</option>
+															<option value="">user</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="sex" class="font-20" style="font-weight: 600;">Sex</label>	
+														<select name="sex" id="sex" class="form-control">
+															<option value="">Male</option>
+															<option value="">Female</option>
+															<option value="">Other</option>
+														</select>													
+													</div>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<!-- truyền id của mỗi blog dô đây -->
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href="javascript:;" class="garbage">
+										<span class="material-icons-outlined">
+										delete
+										</span>
+									</a>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>								
 							</tr>
 							<tr>
 								<th scope="row">2</th>
 								<td>Jacob</td>
 								<td>Thornton</td>
 								<td>@fat</td>
-								<td><span class="badge badge-secondary">Secondary</span></td>
+								<td>
+									<a href="javascript:;" type="button" class="fix">
+										<span class="material-icons-outlined">
+										build
+										</span>
+									</a>
+									<div class="modal-confirm-update">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<div class="form-group">
+														<label for="username" class="font-20" style="font-weight: 600;">Username</label>	
+														<input type="text" name="" value="admin" id="username" class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="password" class="font-20" style="font-weight: 600;">Password</label>	
+														<input type="text" name="" value="password" id="password" class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="email" class="font-20" style="font-weight: 600;">Email</label>	
+														<input type="text" name="" value="email" id="email"  class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="nickname" class="font-20" style="font-weight: 600;">Nickname</label>	
+														<input type="text" name="" value="nickname" id="nickname"  class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="role" class="font-20" style="font-weight: 600;">Role</label>	
+														<select name="role" id="role" class="form-control">
+															<option value="">admin</option>
+															<option value="">staff</option>
+															<option value="">user</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="created" class="font-20" style="font-weight: 600;">created</label>	
+														<input type="date" name="" value="created" id="created" disabled class="form-control">
+													</div>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<!-- truyền id của mỗi blog dô đây -->
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href="javascript:;" class="garbage">
+										<span class="material-icons-outlined">
+										delete
+										</span>
+									</a>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>																	
 							</tr>
 							<tr>
 								<th scope="row">3</th>
 								<td>Larry</td>
 								<td>the Bird</td>
 								<td>@twitter</td>
-								<td><span class="badge badge-success">Success</span></td>
+								<td>
+									<a href="javascript:;" type="button" class="fix">
+										<span class="material-icons-outlined">
+										build
+										</span>
+									</a>
+									<div class="modal-confirm-update">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<div class="form-group">
+														<label for="user-select2" class="font-20" style="font-weight: 600;">Người Đăng</label>	
+														<select name="" id="user-select2" class="form-control">
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+														</select>
+														</div>
+														<div class="form-group">
+														<label for="tag-select2" class="font-20" style="font-weight: 600;">Chủ đề</label>	
+															<select name="" id="tag-select2" class="form-control">
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+															<option value="">ABC</option>
+														</select>
+														</div>
+														<div class="form-group">
+														<label for="content-input2" class="font-20" style="font-weight: 600;">Nội dung</label>	
+														<textarea class="form-control" id="content-input2" name="content" value="" placeholder="Nhập Nội Dung"></textarea>									
+													</div>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<!-- truyền id của mỗi blog dô đây -->
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href="javascript:;" class="garbage">
+										<span class="material-icons-outlined">
+										delete
+										</span>
+									</a>
+									<div class="modal-confirm">
+										<div class="model-box">
+											<div class="box-wrapper">
+												<h3 class="box-header">
+													<!-- truyền id của mỗi blog dô đây -->
+													<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+												</h3>
+												<div class="box-body mb-2">	
+													<p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+												</div>
+												<div class="box-footer">
+													<div class="btn-wrapper">
+														<button type="submit" class="acept-btn form-control">Đồng ý</button>
+														<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>								
 							</tr>
 						</tbody>
 					</table>
-					<div class="collapse collapse-box" id="basic-table" >
-						<div class="code-box">
-							<div class="clearfix">
-								<a href="javascript:;" class="btn btn-primary btn-sm code-copy pull-left"  data-clipboard-target="#basic-table-code"><i class="fa fa-clipboard"></i> Copy Code</a>
-								<a href="#basic-table" class="btn btn-primary btn-sm pull-right" rel="content-y"  data-toggle="collapse" role="button"><i class="fa fa-eye-slash"></i> Hide Code</a>
+					<input type="button" class="btn btn-primary mt-2 garbage" value="ADD USER" />
+					<div class="modal-confirm">
+						<div class="model-box">
+							<div class="box-wrapper">
+								<h3 class="box-header">
+									<!-- truyền id của mỗi blog dô đây -->
+									<span id="close2"  class="close"><i class="fas fa-times"></i></span>
+								</h3>
+								<div class="box-body mb-2">
+									<div class="form-group">
+										<label for="username" class="font-20" style="font-weight: 600;">Username</label>	
+										<input type="text" name="" value="admin" id="username" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="password" class="font-20" style="font-weight: 600;">Password</label>	
+										<input type="text" name="" value="password" id="password" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="email" class="font-20" style="font-weight: 600;">Email</label>	
+										<input type="text" name="" value="email" id="email"  class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="nickname" class="font-20" style="font-weight: 600;">Nickname</label>	
+										<input type="text" name="" value="nickname" id="nickname"  class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="sex" class="font-20" style="font-weight: 600;">Sex</label>	
+										<select name="sex" id="sex" class="form-control">
+											<option value="">Male</option>
+											<option value="">Female</option>
+											<option value="">Other</option>
+										</select>													
+									</div>
+									<div class="form-group">
+										<label for="role" class="font-20" style="font-weight: 600;">Role</label>	
+										<select name="role" id="role" class="form-control">
+											<option value="">admin</option>
+											<option value="">staff</option>
+											<option value="">user</option>
+										</select>
+									</div>
+									
+								</div>
+								<div class="box-footer">
+									<div class="btn-wrapper">
+										<button type="submit" class="acept-btn form-control">Đồng ý</button>
+										<button type="submit" class="close-btn form-control">Hủy bỏ</button>
+									</div>
+								</div>
 							</div>
-							<pre><code class="xml copy-pre" id="basic-table-code">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <th scope="row">1</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-							</code></pre>
 						</div>
 					</div>
 				</div>
@@ -405,7 +715,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- js -->
 	<script src="../vendors/scripts/core.js"></script>
 	<script src="../vendors/scripts/script.min.js"></script>
@@ -421,8 +730,37 @@
 	<script src="../vendors/scripts/apexcharts-setting.js"></script>
 	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
 
+	<script>
+		var a = document.querySelectorAll('.garbage')
+		var b = document.querySelectorAll('.modal-confirm')
+		var c = document.querySelectorAll('.modal-confirm .close')
+		var d = document.querySelectorAll('.modal-confirm .close-btn')
+		var e = document.querySelectorAll('.modal-confirm-update')
+		var f = document.querySelectorAll('.fix')
+		var g = document.querySelectorAll('.modal-confirm-update .close-btn')
+		var x = document.querySelectorAll('.modal-confirm-update .close')
+
+		for(let i = 0 ; i <a.length ; i++){
+			
+			$(a[i]).on('click' , function(){
+				$(b[i]).fadeIn()
+			})
+			$(c[i]).on('click' , function(){
+				$(b[i]).fadeOut()
+			})
+			$(d[i]).on('click' , function(){
+				$(b[i]).fadeOut()
+			})
+			$(f[i]).on('click' , function(){
+				$(e[i]).fadeIn()
+			})
+			$(g[i]).on('click' , function(){
+				$(e[i]).fadeOut()
+			})
+			$(x[i]).on('click' , function(){
+				$(e[i]).fadeOut()
+			})
+		}
+	</script>
 </body>
 </html>
-
-
-
