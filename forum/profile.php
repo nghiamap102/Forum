@@ -90,7 +90,42 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                <form class="form" action="##" method="post" id="registrationForm">
+                    <div class="table_user py-5">
+                        <div class=" py-5">
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                        <th>Tag</th>
+                                        <th>Created Date </th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <th>1</th>
+                                    <th>abc</th>
+                                    <th>abc</th>
+                                    <th>abc</th>
+                                    <th>
+                                        <div>
+                                            <a href="" type="button" class="" style="color: grey;">
+                                                <span class="material-icons-outlined">
+                                                build
+                                                </span>
+                                            </a>
+                                            <a href="" type="button" class="" style="color: grey;">
+                                                <span class="material-icons-outlined">
+                                                delete
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <!-- <form class="form" action="##" method="post" id="registrationForm">
                     <div class="form-group">
                         <div class="col-xs-6">
                             <label for="Username"><h4 class="f-16">Username</h4></label>
@@ -128,44 +163,10 @@
                                     Reset</button>
                             </div>
                     </div>
-              	</form>
+              	</form> -->
                 </div>
             </div>
-            <div class="table_user py-5">
-                <div class=" py-5">
-                    <table class="table" >
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Title</th>
-                                <th>Tag</th>
-                                <th>Created Date </th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <th>1</th>
-                            <th>abc</th>
-                            <th>abc</th>
-                            <th>abc</th>
-                            <th>
-                                <div>
-                                    <a href="" type="button" class="" style="color: grey;">
-										<span class="material-icons-outlined">
-										build
-										</span>
-									</a>
-                                    <a href="" type="button" class="" style="color: grey;">
-										<span class="material-icons-outlined">
-										delete
-										</span>
-									</a>
-                                </div>
-                            </th>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+           
         </div>
     </div>
 </div>
