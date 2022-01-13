@@ -168,7 +168,6 @@
                                         </span>
                                     </button>
                                 </div>
-                                <a href="/search.php" class="d-block text-right">Kiếm Chi Tiết</a>
                             </form>
                         </div>
                     </div>

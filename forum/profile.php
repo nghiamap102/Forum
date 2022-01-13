@@ -72,12 +72,59 @@
                 <div class="col-md-3">
                     <div class="text-center mb-3">
                         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                        <h6 style="color: gray; font-size: 13px; text-align: center;">Upload a different photo...</h6>
-                        <input type="file" name="" value="">
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Website</div>
-                        <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+                    <div class="panel text-center">
+                        <button class="update_ btn btn-primary" >
+                            Cập Nhật                         
+                        </button>
+                        <div class="modal-update">
+                            <div class="model-box">
+                                <div class="box-wrapper">
+                                    <h3 class="box-header">
+                                        <span id="close1"  class="close close-update"><i class="fas fa-times"></i></span>
+                                    </h3>
+                                    <div class="box-body mb-2">
+                                        <form method="POST" >
+                                            <h4 style="text-transform: uppercase;">Infor User</h4>
+                                            <div class="form-group row" style="width: 90%;">
+                                                <label for="Username" class="col-sm-12 col-md-2 col-form-label" style=" padding: 0;padding-top:5px;">Username<i class="text-danger">*</i></label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" name="Username" type="text" value="" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="Password" class="col-sm-12 col-md-2 col-form-label">Password:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" name="Password" type="text" value="" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="Email" class="col-sm-12 col-md-2 col-form-label">Email:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" name="Email" type="text" value="" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="Nickname" class="col-sm-12 col-md-2 col-form-label">Nickname:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" name="Nickname" type="text" value="" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="Sex" class="col-sm-12 col-md-2 col-form-label">Sex:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" name="Sex" type="text" value="" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row justify-content-center ">
+                                                <input type="submit" name="btn_submit" value="Cập nhật" class="form-control btn_submit" style="width: 30%; background-color: #1b00ff; color: white;">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="">
                         <ul class="list-group">
@@ -103,98 +150,254 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <th>1</th>
-                                    <th>abc</th>
-                                    <th>abc</th>
-                                    <th>abc</th>
-                                    <th>
-                                        <div>
-                                            <a href="" type="button" class="" style="color: grey;">
-                                                <span class="material-icons-outlined">
-                                                build
-                                                </span>
-                                            </a>
-                                            <a href="" type="button" class="" style="color: grey;">
-                                                <span class="material-icons-outlined">
-                                                delete
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </th>
+                                    <tr>
+                                        <th>1</th>
+                                        <th>abc</th>
+                                        <th>abc</th>
+                                        <th>abc</th>
+                                        <th>
+                                            <div>
+                                                <a href="javascript:;" class="update_"   style="color: grey;">
+                                                    <span class="material-icons-outlined">
+                                                    build
+                                                    </span>                         
+                                                </a>
+                                                <div class="modal-update">
+                                                    <div class="model-box">
+                                                        <div class="box-wrapper">
+                                                            <h3 class="box-header">
+                                                                <span id="close1"  class="close close-update"><i class="fas fa-times"></i></span>
+                                                            </h3>
+                                                            <div class="box-body mb-2">
+                                                                <form method="POST" action="{{route('blogUpdateAdone', ['blogId'=>$blog->Id])}}">
+                                                                    <div class="form-group row" style="width: 90%;">
+                                                                        <label for="title" class="col-sm-12 col-md-2 col-form-label" style=" padding: 0;padding-top:5px;">Tiêu đề:<i class="text-danger">*</i></label>
+                                                                        <div class="col-sm-12 col-md-10">
+                                                                            <input class="form-control" name="title" type="text" value="" >
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label for="tag" class="col-sm-12 col-md-2 col-form-label">Chủ Đề:</label>
+                                                                        <div class="col-sm-12 col-md-10">
+                                                                            <select name="tag" style="width: 100%;" class="form-control">
+                                                                                <option value="" selected></option>
+                                                                                <option value="" selected></option>
+                                                                                <option value="" selected></option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label for="post_content" class="col-sm-12 col-md-2 col-form-label">Nội dung:<i class="text-danger">*</i></label>
+                                                                        <div class="col-sm-12 col-md-10">
+                                                                            <textarea name="post_content" id="post_content" cols="10" rows="10" class="form-control"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label class="col-sm-12 col-md-2 col-form-label" for="is_public">Public bài viết</label>
+                                                                        <div class="col-sm-12 col-md-10 d-flex justify-content-start align-items-center">
+                                                                            <input type="checkbox" id="is_public" name="is_public" value="1"/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row justify-content-center ">
+                                                                        <input type="submit" name="btn_submit" value="Cập nhật bài viết" class="form-control btn_submit" style="width: 30%; background-color: #1b00ff; color: white;">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <a href="javascript:;" class="remove_"   style="color: grey;">
+                                                    <span class="material-icons-outlined">
+                                                    delete
+                                                    </span>                         
+                                                </a>
+                                                <div class="modal-confirm">
+                                                    <div class="model-box">
+                                                        <div class="box-wrapper">
+                                                            <h3 class="box-header">
+                                                                <span id="close1"  class="close close-remove"><i class="fas fa-times"></i></span>
+                                                            </h3>
+                                                            <div class="box-body mb-2">
+                                                                <p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+                                                            </div>
+                                                            <div class="box-footer">
+                                                                <div class="btn-wrapper">
+                                                                    <!-- truyền id của mỗi blog dô đây -->
+                                                                    <button type="button" class="acept-btn form-control" >Đồng ý</button>
+                                                                    <button type="button" class="close-btn form-control">Hủy bỏ</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>1</th>
+                                        <th>abc</th>
+                                        <th>abc</th>
+                                        <th>abc</th>
+                                        <th>
+                                            <div>
+                                                <a href="javascript:;" class="update_"   style="color: grey;">
+                                                    <span class="material-icons-outlined">
+                                                    build
+                                                    </span>                         
+                                                </a>
+                                                <div class="modal-update">
+                                                    <div class="model-box">
+                                                        <div class="box-wrapper">
+                                                            <h3 class="box-header">
+                                                                <span id="close1"  class="close close-update"><i class="fas fa-times"></i></span>
+                                                            </h3>
+                                                            <div class="box-body mb-2">
+                                                                <form method="POST" action="{{route('blogUpdateAdone', ['blogId'=>$blog->Id])}}">
+                                                                    <div class="form-group row" style="width: 90%;">
+                                                                        <label for="title" class="col-sm-12 col-md-2 col-form-label" style=" padding: 0;padding-top:5px;">Tiêu đề:<i class="text-danger">*</i></label>
+                                                                        <div class="col-sm-12 col-md-10">
+                                                                            <input class="form-control" name="title" type="text" value="" >
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label for="tag" class="col-sm-12 col-md-2 col-form-label">Chủ Đề:</label>
+                                                                        <div class="col-sm-12 col-md-10">
+                                                                            <select name="tag" style="width: 100%;" class="form-control">
+                                                                                <option value="" selected></option>
+                                                                                <option value="" selected></option>
+                                                                                <option value="" selected></option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label for="post_content" class="col-sm-12 col-md-2 col-form-label">Nội dung:<i class="text-danger">*</i></label>
+                                                                        <div class="col-sm-12 col-md-10">
+                                                                            <textarea name="post_content" id="post_content" cols="10" rows="10" class="form-control"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label class="col-sm-12 col-md-2 col-form-label" for="is_public">Public bài viết</label>
+                                                                        <div class="col-sm-12 col-md-10 d-flex justify-content-start align-items-center">
+                                                                            <input type="checkbox" id="is_public" name="is_public" value="1"/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row justify-content-center ">
+                                                                        <input type="submit" name="btn_submit" value="Cập nhật bài viết" class="form-control btn_submit" style="width: 30%; background-color: #1b00ff; color: white;">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <a href="javascript:;" class="remove_"   style="color: grey;">
+                                                    <span class="material-icons-outlined">
+                                                    delete
+                                                    </span>                         
+                                                </a>
+                                                <div class="modal-confirm">
+                                                    <div class="model-box">
+                                                        <div class="box-wrapper">
+                                                            <h3 class="box-header">
+                                                                <span id="close1"  class="close close-remove"><i class="fas fa-times"></i></span>
+                                                            </h3>
+                                                            <div class="box-body mb-2">
+                                                                <p class="font-20" style="font-weight: 600;">Bạn có đồng ý xóa hay không?</p>
+                                                            </div>
+                                                            <div class="box-footer">
+                                                                <div class="btn-wrapper">
+                                                                    <!-- truyền id của mỗi blog dô đây -->
+                                                                    <button type="button" class="acept-btn form-control" >Đồng ý</button>
+                                                                    <button type="button" class="close-btn form-control">Hủy bỏ</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                <!-- <form class="form" action="##" method="post" id="registrationForm">
-                    <div class="form-group">
-                        <div class="col-xs-6">
-                            <label for="Username"><h4 class="f-16">Username</h4></label>
-                            <input type="text" class="form-control" name="Username" id="Username">
-                        </div>
-                        <div class="col-xs-6">
-                            <label for="Password"><h4 class="f-16">Password</h4></label>
-                            <input type="text" class="form-control" name="Password" id="Password">
-                        </div>
-                        <div class="col-xs-6">
-                            <label for="Email"><h4 class="f-16">Email</h4></label>
-                            <input type="text" class="form-control" name="Email" id="Email">
-                        </div>
-                        <div class="col-xs-6">
-                            <label for="Sex"><h4 class="f-16">Sex</h4></label>
-                            <input type="text" class="form-control" name="Sex" id="Sex">
-                        </div>
-                        <div class="col-xs-6">
-                            <label for="nick"><h4 class="f-16">Nick Name</h4></label>
-                            <input type="text" class="form-control" name="NickName" id="nick">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                                <br>
-                                <button class="btn btn-lg btn-success" type="submit">
-                                    <span class="material-icons-outlined" style="vertical-align: middle;">
-                                        check_circle
-                                        </span> 
-                                        Save</button>
-                                <button class="btn btn-lg" type="reset">
-                                    <span class="material-icons-outlined" style="vertical-align: middle;">
-                                    restart_alt
-                                    </span>
-                                    Reset</button>
-                            </div>
-                    </div>
-              	</form> -->
                 </div>
             </div>
-           
         </div>
     </div>
 </div>
 
-
-
 <script>
-    $('.garbage').on('click' , function(){
-        $('.modal-confirm').fadeIn()
-    })
-    $('.close').on('click' , function(){
-        $('.modal-confirm').fadeOut()
-    })
-    $('.close-btn').on('click' , function(){
-        $('.modal-confirm').fadeOut()
-    })
+    var a = document.querySelectorAll('.update_')
+    var e = document.querySelectorAll('.modal-update')
+    var c = document.querySelectorAll('.close-update')
 
-    var a = document.querySelectorAll('.form-right .change_')
-    console.log(a)
-    $('.btn_change').on('click' , function(){
-        for(let i= 0 ; i < a.length ; i ++ ){
-            $(a[i]).removeAttr('disabled')
-        }
-    })
-   
-    
+    var b = document.querySelectorAll('.remove_')
+    var d = document.querySelectorAll('.modal-confirm')
+    var f = document.querySelectorAll('.close-remove')
+    var g = document.querySelectorAll('.close-btn')
+
+    for(let i = 0 ; i <a.length ; i++){
+
+        $(a[i]).on('click' , function(){
+            $(e[i]).fadeIn()
+        })
+        $(c[i]).on('click' , function(){
+            $(e[i]).fadeOut()
+        })
+        $(b[i]).on('click' , function(){
+            $(d[i]).fadeIn()
+        })
+        $(f[i]).on('click' , function(){
+            $(d[i]).fadeOut()
+        })
+        $(g[i]).on('click' , function(){
+            $(d[i]).fadeOut()
+        })
+    }
 </script>
-
+<style>
+.modal-confirm,.modal-update{
+    z-index: 100;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 150px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.model-box{
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 15px;
+    outline: 0;
+    width: 600px;
+    border-radius: 20px;
+}
+.box-footer{
+    text-align: right;
+}
+.btn-wrapper{
+    display: inline-block;
+}
+.btn-wrapper button{
+    width: auto;
+    display: inline;
+}
+.acept-btn{
+	background-color: #4972dc;
+	color: white;
+}
+</style>
 
 
 
