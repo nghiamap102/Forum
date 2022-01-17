@@ -91,13 +91,24 @@
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <div class="dropdown-inner">
-                                                <div class="dropdown-content row">
+                                                <div class="dropdown-menu-content row">
                                                     <!-- for trong này -->
                                                     <div class="col-md-3">
                                                         <a href="">ABC</a>
                                                     </div>
                                                     <!-- endfor -->
-
+                                                    <div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="">ABC</a>
+                                                    </div>
                                                     <div class="col-md-3">
                                                         <a href="">ABC</a>
                                                     </div><div class="col-md-3">

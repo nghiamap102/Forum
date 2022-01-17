@@ -77,6 +77,9 @@
                         <button class="update_ btn btn-primary" >
                             Cập Nhật                         
                         </button>
+                        <button class="update_ btn btn-primary" >
+                            Đổi mật khẩu                        
+                        </button>
                         <div class="modal-update">
                             <div class="model-box">
                                 <div class="box-wrapper">
@@ -86,18 +89,6 @@
                                     <div class="box-body mb-2">
                                         <form method="POST" >
                                             <h4 style="text-transform: uppercase;">Infor User</h4>
-                                            <div class="form-group row" style="width: 90%;">
-                                                <label for="Username" class="col-sm-12 col-md-2 col-form-label" style=" padding: 0;padding-top:5px;">Username<i class="text-danger">*</i></label>
-                                                <div class="col-sm-12 col-md-10">
-                                                    <input class="form-control" name="Username" type="text" value="" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="Password" class="col-sm-12 col-md-2 col-form-label">Password:</label>
-                                                <div class="col-sm-12 col-md-10">
-                                                    <input class="form-control" name="Password" type="text" value="" >
-                                                </div>
-                                            </div>
                                             <div class="form-group row">
                                                 <label for="Email" class="col-sm-12 col-md-2 col-form-label">Email:</label>
                                                 <div class="col-sm-12 col-md-10">
@@ -113,7 +104,51 @@
                                             <div class="form-group row">
                                                 <label for="Sex" class="col-sm-12 col-md-2 col-form-label">Sex:</label>
                                                 <div class="col-sm-12 col-md-10">
-                                                    <input class="form-control" name="Sex" type="text" value="" >
+                                                    <select name="sex" class="form-control">
+                                                        <option value="">Chọn sex</option>
+                                                        <option value="male">Male</option>
+                                                        <option value="female">Female</option>
+                                                    </select>                                     
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="Sex" class="col-sm-12 col-md-2 col-form-label">Role:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <select name="role" class="form-control">
+                                                        <option value="">Chọn Role</option>
+                                                        <option value="staff">Staff</option>
+                                                        <option value="user">User</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row justify-content-center ">
+                                                <input type="submit" name="btn_submit" value="Cập nhật" class="form-control btn_submit" style="width: 30%; background-color: #1b00ff; color: white;">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-update">
+                            <div class="model-box">
+                                <div class="box-wrapper">
+                                    <h3 class="box-header">
+                                        <span id="close1"  class="close close-update"><i class="fas fa-times"></i></span>
+                                    </h3>
+                                    <div class="box-body mb-2">
+                                        <form method="POST" >
+                                            <h4 style="text-transform: uppercase;">Đổi mật khẩu</h4>
+                                            <div class="form-group row" >
+                                                <label for="Username" class="col-sm-12 col-md-2 col-form-label">Username</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" name="Username" type="text" value="" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="Password" class="col-sm-12 col-md-2 col-form-label">Password:</label>
+                                                <div class="col-sm-12 col-md-10">
+                                                    <input class="form-control" name="Password" type="text" value="" >
                                                 </div>
                                             </div>
                                             <div class="form-group row justify-content-center ">

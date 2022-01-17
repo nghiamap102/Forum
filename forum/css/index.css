@@ -243,8 +243,8 @@ label{
 .nav-item{
     padding: 0px 10px;
 }
-.dropdown-inner{
-    padding:  15px;
+.dropdown-menu-content{
+    
 }
 .dropdown-menu{
     left: -300px;
